@@ -1,5 +1,10 @@
 package main
 
+import (
+	"fmt"
+	"structs/zoo"
+)
+
 /*
 0. Declaration
 1. Different types
@@ -19,7 +24,8 @@ package main
 16. Assignment
 */
 
-
-
 func main() {
+	fmt.Printf("On duty today: %s, with %d years of experience\n", zoo.Mihalich.Name, zoo.Mihalich.Experience)
+	fmt.Printf("In the program there is a %s named: %s. It has %d lags", zoo.Spider.Kind, zoo.Spider.Name, zoo.Spider.Number_of_legs)
+
 }

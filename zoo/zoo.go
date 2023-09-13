@@ -9,17 +9,27 @@ type zookeeper struct {
 	Experience int
 }
 
-type animal struct {
+type Animal struct {
 	Kind           string
 	Name           string
 	Number_of_legs int
+	Predator       bool
 }
 
-type cage struct {
+type Cage struct {
 	Size   string
 	Color  string
 	Number int
+	Animal Animal
+}
+
+func (a *Animal) Food() {
+	if a.Predator == true {
+		println("it likes meat")
+	} else {
+		println("it likes apple")
+	}
+
 }
 
 var Mihalich = zookeeper{"Mihail", "Ivanov", 56, 30}
-var Spider = animal{Kind: "spider", Name: "Gora", Number_of_legs: 8}
